@@ -1,99 +1,50 @@
- body{
+* {
+	box-sizing: border-box;
+}
+
+body{
     background-color: #f2f6f9;
     margin: 0;
     padding: 0;
   }
   .header-box{
-	  border-width: 0px;
+	  display: flex;
+	  justify-content: flex-end;
+	  border: 0;
       margin-right: 50px;
       background-color: #08977b;
-	  padding: 20px;
       width: 100%;
-	  height: 50px;
       padding-left: -500px;
 	  font-size: 20px;
   }
 
-    .flip {
-      position: absolute;
-      width: 160px;
-//      height: 48px;
-      perspective: 500px;
-      margin: 0px 0 0 0px;
-    }
-    
-    .flip a {
-      font-weight: 400;
-      text-transform: uppercase;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      transform-style: preserve-3d;
-      transform: translateZ(0);
-      cursor: pointer;
-    }
-    
-    .flip a .front,
-    .flip a .back {
-      margin: 0;
+
+    .flip, .flipl {
       width: 160px;
       height: 48px;
-      line-height: 48px;
-      position: absolute;
-      text-align: center;
-      letter-spacing: 0.4em;
-      transition: transform 0.3s;
+	  align-items: center;
+	  padding: 1rem;
+	  height: 100%;
     }
+	.flipl {
+		margin-right: auto;
+	}
     
-    .flip a .front {
-      background-color: #08977b;
-      color: #fff;
-      transform: rotateY(0) translateZ(0);
+    .flip a, .flipl a {
+		color: white;
+		text-decoration: none;
+		font-weight: 400;
+      text-transform: uppercase;
+      width: 100%;
+      cursor: pointer;
+	  padding: 1rem;
     }
+	.flip a:hover, .flipl a:hover {
+		color: #08977b;
+		background-color: white;
+		transition-duration: 100ms;
+	}
     
-    .flip a .back {
-      background-color: rgba(255,255,255,0);
-      color: rgba(34,34,34,0);
-      transform: rotateX(0) translateZ(0);
-      overflow: hidden;
-    }
-    
-    .flip a .back:after {
-      content: '';
-      position: absolute;
-      top: -32%;
-      left: -10%;
-      width: 120%;
-      height: 50%;
-      background: #08977b;
-      transform: rotate(8deg);
-      transition: all 0.5s ease;
-      transition-delay: 0.15s;
-    }
-    
-    .flip a:hover {
-      transform: translateZ(-25px) rotateX(0);
-    }
-    
-    .flip a:hover .front {
-      background: #000;
-      transition: all 0.8s ease;
-    }
-    
-    .flip a:hover .back {
-      color: #08977b;
-      transition: color 0.4s linear;
-      background: #fff;
-    }
-    
-    .flip a:hover .back:after {
-      transform: rotate(6deg) translate(100px, -18px);
-    }
-    
-    
-
     .img1
     {
       margin-top: 100px;
@@ -117,16 +68,18 @@
     {
       margin-top: 300px;
       margin-left: 30px;
-      margin-right: 800px;
+      margin-right: 1000px;
     }
 
     .img2
     {
-      margin-left: 750px;
-      margin-top: -300px;
+		float: right;
+		margin-right: 100px;
+   	   margin-top: -300px;
     }
     .foot1
     {
+		margin-top: 200px;
       background-color: #08977b;
       position: relative;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
